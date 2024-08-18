@@ -7,7 +7,7 @@ import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
 const authPersistConfig = {
-    key: 'token',
+    key: 'auth',
     storage,
     whitelist: ['token'],
     authReducer,
@@ -20,7 +20,13 @@ export const store = configureStore({
         contacts: contactsReducer,
         filter: filtersReducer,
         auth: authPersistedReducer,
-    }
+    },
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: {
+                ignoredActions: ['persist/PERSIST', 'persist/REHYDRATE'],
+            },
+        }),
 });
 
 export const persistor = persistStore(store);

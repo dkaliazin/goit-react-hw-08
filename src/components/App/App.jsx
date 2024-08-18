@@ -9,7 +9,7 @@ import { selectIsRefreshing } from "../../redux/auth/selectors";
 import RestrictedRoute from '../RestrictedRoute/RestrictedRoute';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
-const HomePage = lazy(() => import('../../pages/Homepage/Homepage'))
+const HomePage = lazy(() => import('../../pages/Homepage/HomePage'))
 const RegistrationPage = lazy(() => import('../../pages/RegistrationPage/RegistrationPage'))
 const LoginPage = lazy(() => import('../../pages/LoginPage/LoginPage'))
 const ContactsPage = lazy(() => import('../../pages/ContactsPage/ContactsPage'))
