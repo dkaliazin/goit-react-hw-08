@@ -1,9 +1,9 @@
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 export default function RegistrationPage() {
     return (
-        <>
-            <h1>Welcome. Please fill the form and sign in.</h1>
+        <div>
+            <h2>Hello. Please sign in.</h2>
             <RegistrationForm />
-        </>
+        </div>
     )
 }

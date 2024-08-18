@@ -1,7 +1,9 @@
+import PageTitle from "../../components/PageTitle/PageTitle"
+
 export default function HomePage() {
     return (
-        <>
-            <h1>Welcome to PhoneBook </h1>
-        </>
+        <PageTitle>
+            <>Welcome to Phonebook</>
+        </PageTitle>
     )
 }
